@@ -3,6 +3,7 @@ import { useRevealObserver } from './hooks/useRevealObserver'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Features from './components/Features/Features'
+import Specs from './components/Specs/Specs'
 export default function App() {
     const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -25,7 +26,8 @@ export default function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-         <Features />
+        <Features />
+        <Specs />
       </main>
     </>
   )
