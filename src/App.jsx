@@ -5,8 +5,10 @@ import Hero from './components/Hero/Hero'
 import Features from './components/Features/Features'
 import Specs from './components/Specs/Specs'
 import Newsletter from './components/Newsletter/Newsletter'
+import Footer from './components/Footer/Footer'
+
 export default function App() {
-    const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
@@ -22,6 +24,7 @@ export default function App() {
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
 
   useRevealObserver()
+
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
@@ -29,8 +32,9 @@ export default function App() {
         <Hero />
         <Features />
         <Specs />
-        <newsletter />
+        <Newsletter />
       </main>
+      <Footer />
     </>
   )
 }
