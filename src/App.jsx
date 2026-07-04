@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRevealObserver } from './hooks/useRevealObserver'
 import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
 export default function App() {
     const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -21,7 +22,10 @@ export default function App() {
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
-     
+      <main>
+        <Hero />
+       
+      </main>
     </>
   )
 }
