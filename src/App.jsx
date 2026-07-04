@@ -6,6 +6,7 @@ import Features from './components/Features/Features'
 import Specs from './components/Specs/Specs'
 import Newsletter from './components/Newsletter/Newsletter'
 import Footer from './components/Footer/Footer'
+import Chatbot from "./components/Chatbot/Chatbot";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -33,8 +34,10 @@ export default function App() {
         <Features />
         <Specs />
         <Newsletter />
+       <Chatbot />
       </main>
       <Footer />
+       
     </>
   )
 }
