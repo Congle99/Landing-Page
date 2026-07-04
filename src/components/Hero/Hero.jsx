@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-
+import laptopImg from '../../assets/laptop.png'
 export default function Hero() {
   return (
     <section className={styles.hero}>
@@ -62,7 +62,14 @@ export default function Hero() {
 
         <div className={styles.visual}>
           <div className={styles.laptopWrap}>
-            <LaptopSVG />
+            <div className={styles.heroImage}>
+  <img
+    src={laptopImg}
+    alt="AuraBook Pro"
+    className={styles.laptopImage}
+  />
+</div>
+           {/* <LaptopSVG /> */}
           </div>
           <div className={styles.floatCard1}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2">
